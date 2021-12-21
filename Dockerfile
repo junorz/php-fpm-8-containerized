@@ -1,4 +1,4 @@
-FROM php:8.1.0-fpm
+FROM php:8-fpm
 
 ENV MYSQLD_SOCK=/var/run/mysqld/mysqld.sock
 
@@ -15,7 +15,7 @@ pecl install redis && \
 docker-php-ext-configure gd --with-freetype --with-jpeg && \
 docker-php-ext-configure opcache --enable-opcache && \
 docker-php-ext-install -j$(nproc) pdo_mysql mysqli pgsql pdo_pgsql bz2 gd soap tidy xsl opcache && \
-docker-php-ext-enable mcrypt imagick redis
+docker-php-ext-enable imagick redis
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
