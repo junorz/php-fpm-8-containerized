@@ -9,7 +9,6 @@ libxml2-dev libtidy-dev libxslt1-dev \
 libpq-dev \
 libmcrypt-dev \
 libmagickwand-dev && \
-pecl install mcrypt && \
 pecl install imagick && \
 pecl install redis && \
 docker-php-ext-configure gd --with-freetype --with-jpeg && \
