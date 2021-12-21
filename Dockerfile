@@ -1,4 +1,4 @@
-FROM php:8-fpm
+FROM php:8.1.0-fpm
 
 ENV MYSQLD_SOCK=/var/run/mysqld/mysqld.sock
 
